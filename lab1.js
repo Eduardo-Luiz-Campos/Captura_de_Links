@@ -40,3 +40,9 @@ buscarHTML(URL_ALVO)
         links.forEach(link => console.log(link));
     })
     .catch(err => console.error('Erro:', err.message));
+
+//1. O que acontece se a URL usar HTTP em vez de HTTPS? O mesmo módulo funciona?
+    //Ele quebra o node e não funciona, já que precisa de outra função
+//2. Por que o evento 'data' pode ser disparado múltiplas vezes?
+    //Pois quando pede o HTML de um site, o servidor envia o arquivo quebrado em pacotes menores
+    //para que eles possam viajar pela rede de forma mais rápida e eficiente.
